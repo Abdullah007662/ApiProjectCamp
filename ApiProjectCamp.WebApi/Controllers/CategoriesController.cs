@@ -30,11 +30,19 @@ namespace ApiProjectCamp.WebApi.Controllers
             return Ok("Kategori Başarılı Bir Şekilde Kayıt Edildi.!");
         }
         [HttpDelete]
+
+        //Deneme
+        //Deneme Yapıldı
         public IActionResult DeleteCategory(Category category)
         {
             _context.Categories.Remove(category);
             _context.SaveChanges();
             return Ok("Kategori Başarılı Bir Şekilde Silindi");
+        }
+        [HttpGet]
+        public IActionResult deneme()
+        {
+            return Ok();
         }
     }
 }
