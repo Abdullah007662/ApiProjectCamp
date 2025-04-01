@@ -30,7 +30,7 @@ namespace ApiProjectCamp.WebApi.Controllers
             var value = _mapper.Map<Message>(createMessageDTO);
             _context.Messages.Add(value);
             _context.SaveChanges();
-            return Ok();
+            return Ok("Mesaj Ekleme İşlemi Başarılı");
         }
         [HttpDelete]
         public IActionResult DeleteMessages(int id)
