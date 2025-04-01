@@ -10,6 +10,8 @@ namespace ApiProjectCamp.WebApi.ValidationRules
             RuleFor(x=>x.ProductName).NotEmpty().WithMessage("Ürün Adı Boş Geçilemez.!");
             RuleFor(x=>x.ProductName).MinimumLength(2).WithMessage("En Az 2 Karakter Veri Girişi Yapın.!");
             RuleFor(x=>x.ProductName).MaximumLength(50).WithMessage("En Fazla 50 Karakter Veri Girişi Yapın.!");
+
+            RuleFor(x => x.ProductDescription).NotEmpty().WithMessage("Açıklama kısmı boş geçilemez");
         }
     }
 }
